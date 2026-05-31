@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Residencya International Advisory</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f8fafc;
+    color:#1f2937;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#111827,#1e3a8a);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+    border-bottom:4px solid #d4af37;
+}
+
+header img{
+    width:120px;
+    margin-bottom:15px;
+}
+
+header h1{
+    margin:0;
+    color:#d4af37;
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    opacity:.95;
+}
+
+.tagline{
+    margin-top:15px;
+    font-style:italic;
+    color:#d4af37;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:12px;
+    border-top:4px solid #d4af37;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+h2{
+    color:#1e3a8a;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+    color:#1e3a8a;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #cbd5e1;
+    box-sizing:border-box;
+}
+
+.whatsapp-btn{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+.response{
+    text-align:center;
+    margin-top:10px;
+    font-size:13px;
+}
+
+/* SERVICES */
+
+.service-box{
+    margin-top:15px;
+    padding:18px;
+    background:#f8fafc;
+    border-left:4px solid #d4af37;
+    border-radius:8px;
+}
+
+.service-title{
+    color:#1e3a8a;
+    font-weight:bold;
+    display:block;
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#6b7280;
+    font-size:13px;
+}
+
+/* FLOAT WHATSAPP */
+
+.wa-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-size:26px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png.png" alt="Residencya Logo">
+
+<h1>Residencya International Advisory</h1>
+
+<p>
+Real Estate Advisory & Property Management
+</p>
+
+<div class="tagline">
+Your Trust, Our Commitment To Excellence
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- FORM -->
+
+<div class="card">
+
+<h2>International Property Inquiry</h2>
+
+<label>Service Type</label>
+<select id="service">
+<option>Buy</option>
+<option>Sell</option>
+<option>Lease</option>
+<option>Invest</option>
+</select>
+
+<label>Your Interest</label>
+<select id="interest">
+<option>Residential Real Estate</option>
+<option>Commercial Real Estate</option>
+</select>
+
+<label>You Are</label>
+<select id="status">
+<option>Buyer</option>
+<option>Seller</option>
+<option>Tenant</option>
+<option>Landlord</option>
+<option>Agency</option>
+<option>Developer</option>
+<option>Investor</option>
+</select>
+
+<label>Property Type</label>
+<select id="property">
+<option>Apartment</option>
+<option>Duplex</option>
+<option>Studio</option>
+<option>House</option>
+<option>Building</option>
+<option>Villa</option>
+<option>Land</option>
+<option>Office</option>
+<option>Retail Shop</option>
+<option>Industrial Property</option>
+<option>Warehouse</option>
+<option>Business Asset</option>
+<option>Other</option>
+</select>
+
+<label>Estate Agent Mandate</label>
+<select id="mandate">
+<option>Advisory Only</option>
+<option>Non-Exclusive Mandate</option>
+<option>Exclusive Mandate</option>
+</select>
+
+<label>Country of Residence</label>
+<input type="text" placeholder="Example: United Kingdom">
+
+<label>Maximum Budget (€ / $)</label>
+<input type="text" placeholder="Example: €250,000">
+
+<label>Property / Project Description</label>
+<textarea rows="4" placeholder="Describe your property or investment project"></textarea>
+
+<label>Full Name</label>
+<input type="text" placeholder="John Smith">
+
+<label>Phone Number</label>
+<input type="text" placeholder="+44 1234 567890">
+
+<label>Email Address</label>
+<input type="email" placeholder="john@email.com">
+
+<label>Preferred Meeting Date & Time</label>
+<input type="text" placeholder="15/06/2026 at 3:00 PM">
+
+<button class="whatsapp-btn">
+Submit via WhatsApp
+</button>
+
+<div class="response">
+⚡ Response within 24 hours
+</div>
+
+</div>

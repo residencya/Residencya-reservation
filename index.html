@@ -15,7 +15,6 @@
       color: #1f2937;
     }
 
-    /* HEADER */
     header {
       background: #2563eb;
       color: white;
@@ -52,7 +51,6 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    /* 🔵 BLEU PRO UNI */
     h2 {
       color: #000000;
     }
@@ -72,11 +70,12 @@
       border: 1px solid #cbd5e1;
     }
 
+    /* BUTTON FORM */
     button {
       width: 100%;
       margin-top: 20px;
       padding: 14px;
-      background: #2563eb;
+      background: #25D366;
       color: white;
       border: none;
       border-radius: 8px;
@@ -85,7 +84,7 @@
     }
 
     button:hover {
-      background: #1d4ed8;
+      background: #1ebe5d;
     }
 
     .service-box {
@@ -116,7 +115,15 @@
       color: #6b7280;
     }
 
-    /* WHATSAPP BUTTON (VERT NORMAL) */
+    .response-time {
+      text-align: center;
+      font-size: 13px;
+      color: #111827;
+      margin-top: 10px;
+      opacity: 0.75;
+    }
+
+    /* FLOAT WHATSAPP */
     .wa-btn {
       position: fixed;
       bottom: 20px;
@@ -137,7 +144,6 @@
       font-size: 26px;
       color: white;
     }
-
   </style>
 </head>
 
@@ -151,7 +157,7 @@
 
 <div class="container">
 
-  <!-- FORMULAIRE -->
+  <!-- FORM -->
   <div class="card">
     <h2>Réservation / Demande immobilière</h2>
 
@@ -202,34 +208,38 @@
     <input type="text" id="ville" placeholder="Ex : Marrakech, Casablanca...">
 
     <label>Description</label>
-    <textarea id="desc" rows="4" placeholder="Décrivez votre projet immobilier..."></textarea>
+    <textarea id="desc" rows="4"></textarea>
 
     <label>Nom complet</label>
-    <input type="text" id="nom" placeholder="Ex : john doe ">
+    <input type="text" id="nom">
 
     <label>Téléphone</label>
-    <input type="text" id="tel" placeholder="Ex : 06 00 00 00 00">
+    <input type="text" id="tel">
 
     <label>Email</label>
-    <input type="email" id="email" placeholder="Ex : nom@email.com">
+    <input type="email" id="email">
 
     <label>Heure de rendez-vous</label>
     <input type="text" id="rdv" placeholder="Ex : 01/01/2026 à 15h00">
 
     <button onclick="sendWhatsApp()">Envoyer via WhatsApp</button>
+
+    <!-- MARKETING LINE -->
+    <p class="response-time">
+      ⚡ Réponse sous 30 min
+    </p>
   </div>
 
-  <!-- PHRASE MARKETING -->
+  <!-- TAGLINE -->
   <div class="tagline-blue">
     Votre confiance et notre succès
   </div>
 
-  <!-- À PROPOS -->
+  <!-- ABOUT -->
   <div class="card">
     <h2>À propos</h2>
     <p>
       Residencya est un cabinet de conseil et de management immobilier opérant sur tout le Maroc.
-      Nous accompagnons particuliers, professionnels et investisseurs dans leurs projets immobiliers.
     </p>
   </div>
 
@@ -238,18 +248,15 @@
     <h2>Nos services</h2>
 
     <div class="service-box">
-      🏠 Vente & achat immobilier  
-      <br>Honoraires : <b>à partir de 2,5% HT</b>
+      Vente & achat immobilier — 2,5% HT
     </div>
 
     <div class="service-box">
-      🏡 Location longue durée  
-      <br>Honoraires : <b>à partir de 0,5 mois de loyer HT</b>
+      Location longue durée — 0,5 mois de loyer HT
     </div>
 
     <div class="service-box">
-      💼 Pack accompagnement professionnel  
-      <br>Expansion • Franchise • Étude de positionnement
+      Pack accompagnement professionnel — expansion, franchise, positionnement
     </div>
   </div>
 
@@ -270,11 +277,12 @@
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
-  Residencya © 2026 — Tous droits réservés
+  Residencya © 2026 — All rights reserved
 </div>
 
-<!-- WHATSAPP FLOAT BUTTON -->
+<!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/212600795000" target="_blank" class="wa-btn">
   <span>💬</span>
 </a>

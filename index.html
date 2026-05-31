@@ -70,7 +70,6 @@
       border: 1px solid #cbd5e1;
     }
 
-    /* BUTTON FORM */
     button {
       width: 100%;
       margin-top: 20px;
@@ -123,7 +122,6 @@
       opacity: 0.75;
     }
 
-    /* FLOAT WHATSAPP */
     .wa-btn {
       position: fixed;
       bottom: 20px;
@@ -205,29 +203,26 @@
     </select>
 
     <label>Ville</label>
-    <input type="text" id="ville" placeholder="Ex : Marrakech, Casablanca...">
+    <input type="text" id="ville" placeholder="Ex : Marrakech / Casablanca / Rabat">
 
     <label>Description</label>
-    <textarea id="desc" rows="4"></textarea>
+    <textarea id="desc" rows="4" placeholder="Décrivez votre bien ou votre projet (ex : appartement 90m² centre-ville...)"></textarea>
 
     <label>Nom complet</label>
-    <input type="text" id="nom">
+    <input type="text" id="nom" placeholder="Ex : Mohamed El Amrani">
 
     <label>Téléphone</label>
-    <input type="text" id="tel">
+    <input type="text" id="tel" placeholder="Ex : 06 00 00 00 00">
 
     <label>Email</label>
-    <input type="email" id="email">
+    <input type="email" id="email" placeholder="Ex : nom@email.com">
 
     <label>Heure de rendez-vous</label>
     <input type="text" id="rdv" placeholder="Ex : 01/01/2026 à 15h00">
 
     <button onclick="sendWhatsApp()">Envoyer via WhatsApp</button>
 
-    <!-- MARKETING LINE -->
-    <p class="response-time">
-      ⚡ Réponse sous 30 min
-    </p>
+    <p class="response-time">⚡ Réponse sous 30 min</p>
   </div>
 
   <!-- TAGLINE -->
@@ -240,6 +235,7 @@
     <h2>À propos</h2>
     <p>
       Residencya est un cabinet de conseil et de management immobilier opérant sur tout le Maroc.
+      Nous accompagnons particuliers, professionnels et investisseurs dans leurs projets immobiliers.
     </p>
   </div>
 
@@ -248,15 +244,22 @@
     <h2>Nos services</h2>
 
     <div class="service-box">
-      Vente & achat immobilier — 2,5% HT
+      🏠 Vente & achat immobilier  
+      <br>Honoraires : <b>à partir de 2,5% HT</b>
     </div>
 
     <div class="service-box">
-      Location longue durée — 0,5 mois de loyer HT
+      🏡 Location longue durée (particulier & professionnel)  
+      <br>Honoraires : <b>à partir de 0,5 mois de loyer HT</b>
     </div>
 
     <div class="service-box">
-      Pack accompagnement professionnel — expansion, franchise, positionnement
+      💼 Pack accompagnement professionnel  
+      <br>- Service expansion d'entreprise  
+      <br>- Implantation de filiale  
+      <br>- Franchise  
+      <br>- Étude de positionnement  
+      <br>Honoraires : selon projet
     </div>
   </div>
 
@@ -282,7 +285,7 @@
   Residencya © 2026 — All rights reserved
 </div>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/212600795000" target="_blank" class="wa-btn">
   <span>💬</span>
 </a>
@@ -318,9 +321,7 @@ Nous revenons vers vous très rapidement 👍%0A%0A
 - RDV : ${rdv}`;
 
   let phone = "212600795000";
-  let url = "https://wa.me/" + phone + "?text=" + message;
-
-  window.open(url, "_blank");
+  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
 }
 </script>
 

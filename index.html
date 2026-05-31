@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Residencya - Cabinet de conseil et de management immobilier</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
@@ -17,7 +16,8 @@
     }
 
     header {
-      background: #0f2a4a;
+      /* 🔵 BLEU MOINS FONCÉ (AMÉLIORÉ) */
+      background: #1e3a5f;
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -53,7 +53,7 @@
     }
 
     h2 {
-      color: #0f2a4a;
+      color: #1e3a5f;
     }
 
     label {
@@ -119,7 +119,7 @@
       color: #6b7280;
     }
 
-    /* WhatsApp floating button */
+    /* WhatsApp button */
     .wa-btn {
       position: fixed;
       bottom: 20px;
@@ -236,8 +236,7 @@
     <h2>À propos</h2>
     <p>
       Residencya est un cabinet de conseil et de management immobilier opérant sur l’ensemble du Maroc.
-      Nous accompagnons particuliers, professionnels et investisseurs dans leurs projets immobiliers,
-      de la recherche à la gestion stratégique et au développement commercial.
+      Nous accompagnons particuliers, professionnels et investisseurs dans leurs projets immobiliers.
     </p>
   </div>
 
@@ -251,13 +250,13 @@
     </div>
 
     <div class="service-box">
-      🏡 Location longue durée (particulier & professionnel)  
+      🏡 Location longue durée  
       <br>Honoraires : <b>à partir de 0,5 mois de loyer HT</b>
     </div>
 
     <div class="service-box">
       💼 Pack accompagnement professionnel  
-      <br>Service d’expansion immobilière • Franchise & développement de filiales • Étude de positionnement
+      <br>Expansion • Franchise • Étude de positionnement
     </div>
   </div>
 
@@ -269,7 +268,7 @@
     <p>☎ 0600 795 000</p>
 
     <p>
-      Suivez-nous sur Instagram : 
+      Instagram : 
       <a href="https://instagram.com/residencya.invest" target="_blank">
         @residencya.invest
       </a>
@@ -301,8 +300,12 @@ function sendWhatsApp() {
   let email = document.getElementById("email").value;
   let rdv = document.getElementById("rdv").value;
 
+  // 📌 MESSAGE WHATSAPP APRÈS FORMULAIRE (AUTO QUALIFICATION)
   let message =
-`Bonjour Residencya,%0A
+`Bonjour 👋 Residencya a bien reçu votre demande.%0A%0A
+Un conseiller analyse votre projet immobilier.%0A%0A
+Nous revenons vers vous très rapidement 👍%0A%0A
+--- Détails --- %0A
 - Service : ${service}%0A
 - Intérêt : ${interet}%0A
 - Vous êtes : ${statut}%0A

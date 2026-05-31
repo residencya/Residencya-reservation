@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Residencya | Real Estate Advisory</title>
+<title>Residencya | Cabinet de conseil immobilier</title>
 
 <style>
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background: #070b14;
   color: #e5e7eb;
 }
@@ -132,66 +132,68 @@ footer {
 <div class="hero">
   <img src="logo.png.png" alt="Residencya">
   <h1>RESIDENCYA</h1>
-  <p>Cabinet de conseil & management immobilier international</p>
-  <p style="opacity:0.6;">Morocco • Investment • Advisory • Real Estate Strategy</p>
+  <p>Cabinet de conseil et de management immobilier</p>
+  <p style="opacity:0.7;">Immobilier • Investissement • Stratégie • Maroc</p>
 
-  <a class="btn" href="#form">Book a Consultation</a>
+  <a class="btn" href="#form">Réserver une consultation</a>
 </div>
 
 <!-- FORM -->
 <div class="container" id="form">
 
-  <div class="section-title">Private Real Estate Advisory</div>
+  <div class="section-title">Conseil immobilier privé</div>
 
   <div class="card">
 
-    <label>Service Type</label>
+    <label>Type de service</label>
     <select id="service">
-      <option>Sale</option>
-      <option>Purchase</option>
-      <option>Rental</option>
-      <option>Investment</option>
+      <option>Vente</option>
+      <option>Achat</option>
+      <option>Location</option>
+      <option>Investissement</option>
     </select>
 
-    <label>Mandate</label>
+    <label>Mandat souhaité</label>
     <select id="mandate">
-      <option>Exclusive</option>
-      <option>Standard</option>
-      <option>Consulting Only</option>
+      <option>Exclusif</option>
+      <option>Simple</option>
+      <option>Conseil uniquement</option>
     </select>
 
-    <label>Property Type</label>
+    <label>Type de bien</label>
     <select id="type">
-      <option>Apartment</option>
+      <option>Appartement</option>
       <option>Villa</option>
-      <option>Land</option>
-      <option>Commercial</option>
-      <option>Office</option>
-      <option>Hotel / Hospitality</option>
+      <option>Maison</option>
+      <option>Terrain</option>
+      <option>Local commercial</option>
+      <option>Bureau</option>
+      <option>Hôtel / Riad</option>
+      <option>Autre</option>
     </select>
 
-    <label>City</label>
-    <input id="city" placeholder="Morocco / International">
+    <label>Ville</label>
+    <input id="city" placeholder="Partout au Maroc">
 
     <label>Budget</label>
-    <input id="budget" placeholder="€ / MAD">
+    <input id="budget" placeholder="MAD / EUR">
 
-    <label>Project Details</label>
+    <label>Description du projet</label>
     <textarea id="desc" rows="4"></textarea>
 
-    <label>Full Name</label>
+    <label>Nom complet</label>
     <input id="name">
 
-    <label>Phone</label>
+    <label>Téléphone</label>
     <input id="phone">
 
     <label>Email</label>
     <input id="email">
 
-    <label>Preferred Time</label>
+    <label>Heure de rendez-vous souhaitée</label>
     <input id="time">
 
-    <button onclick="send()">Request Private Consultation</button>
+    <button onclick="send()">Envoyer via WhatsApp</button>
 
   </div>
 </div>
@@ -199,28 +201,29 @@ footer {
 <!-- SERVICES -->
 <div class="container">
 
-  <div class="section-title">Our Services</div>
+  <div class="section-title">Nos services</div>
 
   <div class="service">
-    <b>Real Estate Sales & Acquisition</b><br>
-    Fees: from 2.5% HT
+    <b>Vente & achat immobilier</b><br>
+    Honoraires : à partir de 2,5% HT
   </div>
 
   <div class="service">
-    <b>Long Term Rental Advisory</b><br>
-    Fees: 0.5 month rent HT
+    <b>Location longue durée</b><br>
+    Honoraires : à partir de 0,5 mois de loyer HT
   </div>
 
   <div class="service">
-    <b>Investment & Strategic Advisory</b><br>
-    Expansion • Franchise • Structuring • Market positioning
+    <b>Accompagnement & conseil stratégique</b><br>
+    Expansion • Franchise • Structuration • Étude de marché
   </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-  Residencya © 2026 — All Rights Reserved
+  <p>Residencya © 2026 — Tous droits réservés</p>
+  <p><b>Votre confiance et notre succès !</b></p>
 </footer>
 
 <script>
@@ -238,17 +241,17 @@ function send() {
   let time = document.getElementById("time").value;
 
   let message =
-`Residencya Private Advisory%0A
+`Residencya - Demande immobilière%0A
 Service: ${service}%0A
-Mandate: ${mandate}%0A
-Type: ${type}%0A
-City: ${city}%0A
+Mandat: ${mandate}%0A
+Type de bien: ${type}%0A
+Ville: ${city}%0A
 Budget: ${budget}%0A
-Details: ${desc}%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
+Description: ${desc}%0A
+Nom: ${name}%0A
+Téléphone: ${phone}%0A
 Email: ${email}%0A
-Time: ${time}`;
+RDV: ${time}`;
 
   let number = "212600795000";
   let url = "https://wa.me/" + number + "?text=" + message;

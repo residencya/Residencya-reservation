@@ -118,6 +118,29 @@
       font-size: 13px;
       color: #6b7280;
     }
+
+    /* WhatsApp floating button */
+    .wa-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .wa-btn span {
+      font-size: 26px;
+      color: white;
+    }
+
   </style>
 </head>
 
@@ -197,6 +220,10 @@
     <input type="text" id="rdv" placeholder="Ex : 01/01/2026 à 15h00">
 
     <button onclick="sendWhatsApp()">Envoyer via WhatsApp</button>
+
+    <p style="text-align:center; font-size:12px; color:#6b7280; margin-top:10px;">
+      Réponse rapide sur WhatsApp ⚡
+    </p>
   </div>
 
   <!-- PHRASE MARKETING -->
@@ -254,6 +281,11 @@
 <div class="footer">
   Residencya © 2026 — Tous droits réservés
 </div>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/212600795000" target="_blank" class="wa-btn">
+  <span>💬</span>
+</a>
 
 <script>
 function sendWhatsApp() {

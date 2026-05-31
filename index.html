@@ -3,78 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Residencya - Cabinet de Management Immobilier</title>
+  <title>Residencya 2026 - Immobilier Maroc</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
+      background: #0b1220; /* bleu foncé */
+      color: #e5e7eb;
     }
 
     header {
-      background: #0f172a;
-      color: white;
+      background: #0f1b33;
       text-align: center;
-      padding: 70px 20px;
+      padding: 60px 20px;
+      border-bottom: 1px solid #1f2a44;
     }
 
     header h1 {
-      margin: 0;
+      margin: 10px 0 5px;
       font-size: 42px;
-      letter-spacing: 1px;
+      color: #ffffff;
     }
 
     header p {
-      margin-top: 10px;
-      font-size: 18px;
-      opacity: 0.9;
+      margin: 5px 0;
+      opacity: 0.85;
     }
 
     .tagline {
       margin-top: 10px;
+      color: #93c5fd;
       font-style: italic;
-      color: #cbd5e1;
     }
 
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
     }
 
     .card {
-      background: white;
-      margin-top: 20px;
+      background: #111a2e;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
     h2 {
-      margin-top: 0;
+      color: #ffffff;
     }
 
     label {
       display: block;
       margin-top: 12px;
       font-weight: bold;
+      color: #cbd5e1;
     }
 
-    select, input, textarea {
+    input, select, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
       border-radius: 6px;
-      border: 1px solid #ccc;
+      border: 1px solid #334155;
+      background: #0b1220;
+      color: #fff;
     }
 
     button {
       width: 100%;
       margin-top: 20px;
       padding: 14px;
-      background: #16a34a;
+      background: #2563eb;
       color: white;
       border: none;
       border-radius: 8px;
@@ -83,19 +85,14 @@
     }
 
     button:hover {
-      background: #15803d;
+      background: #1d4ed8;
     }
 
-    .info {
+    .footer {
       text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
+      padding: 20px;
+      font-size: 13px;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -103,7 +100,8 @@
 <body>
 
 <header>
-  <h1>Residencya</h1>
+  <img src="logo.png.png" style="width:110px; margin-bottom:10px;">
+  <h1>Residencya 2026</h1>
   <p>Cabinet de management immobilier</p>
   <div class="tagline">Votre confiance et notre succès !</div>
 </header>
@@ -111,7 +109,7 @@
 <div class="container">
 
   <div class="card">
-    <h2>Réservation / Demande immobilière</h2>
+    <h2>Formulaire immobilier</h2>
 
     <label>Type de service</label>
     <select id="service">
@@ -119,6 +117,19 @@
       <option>Achat</option>
       <option>Location</option>
       <option>Investissement</option>
+    </select>
+
+    <label>Mandat souhaité</label>
+    <select id="mandat">
+      <option>Simple</option>
+      <option>Exclusif</option>
+      <option>Conseil uniquement</option>
+    </select>
+
+    <label>Votre intérêt</label>
+    <select id="interet">
+      <option>Immobilier résidentiel</option>
+      <option>Immobilier commercial</option>
     </select>
 
     <label>Vous êtes</label>
@@ -150,7 +161,7 @@
     <input type="text" id="ville" placeholder="Partout au Maroc">
 
     <label>Description</label>
-    <textarea id="desc" rows="4" placeholder="Décrivez votre besoin ou votre bien"></textarea>
+    <textarea id="desc" rows="4"></textarea>
 
     <label>Nom complet</label>
     <input type="text" id="nom">
@@ -161,23 +172,24 @@
     <label>Email</label>
     <input type="email" id="email">
 
-    <label>Heure de rendez-vous souhaitée</label>
-    <input type="text" id="rdv" placeholder="Ex: 15h / Lundi matin">
+    <label>Heure de RDV</label>
+    <input type="text" id="rdv">
 
-    <button onclick="sendWhatsApp()">Réserver via WhatsApp</button>
+    <button onclick="sendWhatsApp()">Envoyer via WhatsApp</button>
   </div>
 
 </div>
 
-<div class="info">
-  <p>Contact : contact.residencya@gmail.com</p>
-  <p>Suivez-nous sur Instagram : <a href="https://instagram.com" target="_blank">@residencya</a></p>
+<div class="footer">
+  Residencya 2026 — All rights reserved
 </div>
 
 <script>
 function sendWhatsApp() {
 
   let service = document.getElementById("service").value;
+  let mandat = document.getElementById("mandat").value;
+  let interet = document.getElementById("interet").value;
   let statut = document.getElementById("statut").value;
   let bien = document.getElementById("bien").value;
   let ville = document.getElementById("ville").value;
@@ -188,8 +200,10 @@ function sendWhatsApp() {
   let rdv = document.getElementById("rdv").value;
 
   let message =
-`Bonjour Residencya,%0A
+`Bonjour Residencya 2026,%0A
 - Service : ${service}%0A
+- Mandat : ${mandat}%0A
+- Intérêt : ${interet}%0A
 - Statut : ${statut}%0A
 - Bien : ${bien}%0A
 - Ville : ${ville}%0A
@@ -199,7 +213,7 @@ function sendWhatsApp() {
 - Email : ${email}%0A
 - RDV : ${rdv}`;
 
-  let phone = "212600795000"; // ton WhatsApp
+  let phone = "212600795000";
   let url = "https://wa.me/" + phone + "?text=" + message;
 
   window.open(url, "_blank");

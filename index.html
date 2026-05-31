@@ -146,6 +146,18 @@
       <option>Immobilier commercial</option>
     </select>
 
+    <!-- ✅ AJOUT REQUIS -->
+    <label>Vous êtes</label>
+    <select id="statut">
+      <option>Acheteur</option>
+      <option>Vendeur</option>
+      <option>Locataire</option>
+      <option>Bailleur</option>
+      <option>Agence</option>
+      <option>Promoteur</option>
+      <option>Investisseur</option>
+    </select>
+
     <label>Type de bien</label>
     <select id="bien">
       <option>Appartement</option>
@@ -202,7 +214,7 @@
 
   <!-- SERVICES -->
   <div class="card">
-    <h2>Nos offres & services</h2>
+    <h2>Nos services</h2>
 
     <div class="service-box">
       🏠 Vente & achat immobilier  
@@ -246,6 +258,7 @@ function sendWhatsApp() {
 
   let service = document.getElementById("service").value;
   let interet = document.getElementById("interet").value;
+  let statut = document.getElementById("statut").value;
   let bien = document.getElementById("bien").value;
   let ville = document.getElementById("ville").value;
   let desc = document.getElementById("desc").value;
@@ -258,6 +271,7 @@ function sendWhatsApp() {
 `Bonjour Residencya,%0A
 - Service : ${service}%0A
 - Intérêt : ${interet}%0A
+- Vous êtes : ${statut}%0A
 - Bien : ${bien}%0A
 - Ville : ${ville}%0A
 - Description : ${desc}%0A

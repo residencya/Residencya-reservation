@@ -42,16 +42,10 @@ body {
   opacity: 0.8;
 }
 
-.btn {
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: #c9a227;
-  color: #000;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
+.tagline {
+  margin-top: 10px;
+  color: #c9a227;
+  font-style: italic;
 }
 
 /* SECTIONS */
@@ -65,7 +59,6 @@ body {
   font-size: 28px;
   margin-bottom: 20px;
   color: #c9a227;
-  letter-spacing: 1px;
 }
 
 /* FORM */
@@ -74,7 +67,6 @@ body {
   padding: 25px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
 }
 
 label {
@@ -82,7 +74,6 @@ label {
   margin-top: 12px;
   font-weight: bold;
   font-size: 13px;
-  opacity: 0.9;
 }
 
 input, select, textarea {
@@ -121,7 +112,7 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 13px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 </style>
 </head>
@@ -131,7 +122,12 @@ footer {
 <!-- HERO -->
 <div class="hero">
   <img src="logo.png.png" alt="Residencya">
+
   <h1>RESIDENCYA</h1>
+
+  <!-- PHRASE MARKETING EN HAUT -->
+  <div class="tagline">Votre confiance et notre succès !</div>
+
   <p>Cabinet de conseil et de management immobilier</p>
   <p style="opacity:0.7;">Immobilier • Investissement • Stratégie • Maroc</p>
 
@@ -153,11 +149,10 @@ footer {
       <option>Investissement</option>
     </select>
 
-    <label>Mandat souhaité</label>
-    <select id="mandate">
-      <option>Exclusif</option>
-      <option>Simple</option>
-      <option>Conseil uniquement</option>
+    <label>Votre intérêt</label>
+    <select id="interest">
+      <option>Immobilier résidentiel</option>
+      <option>Immobilier commercial</option>
     </select>
 
     <label>Type de bien</label>
@@ -174,9 +169,6 @@ footer {
 
     <label>Ville</label>
     <input id="city" placeholder="Partout au Maroc">
-
-    <label>Budget</label>
-    <input id="budget" placeholder="MAD / EUR">
 
     <label>Description du projet</label>
     <textarea id="desc" rows="4"></textarea>
@@ -214,26 +206,24 @@ footer {
   </div>
 
   <div class="service">
-    <b>Accompagnement & conseil stratégique</b><br>
-    Expansion • Franchise • Structuration • Étude de marché
+    <b>Pack accompagnement professionnel</b><br>
+    Service d’expansion immobilière • Franchise & développement de filiales • Étude de positionnement
   </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>Residencya © 2026 — Tous droits réservés</p>
-  <p><b>Votre confiance et notre succès !</b></p>
+  Residencya 2026 — All rights reserved
 </footer>
 
 <script>
 function send() {
 
   let service = document.getElementById("service").value;
-  let mandate = document.getElementById("mandate").value;
+  let interest = document.getElementById("interest").value;
   let type = document.getElementById("type").value;
   let city = document.getElementById("city").value;
-  let budget = document.getElementById("budget").value;
   let desc = document.getElementById("desc").value;
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
@@ -243,10 +233,9 @@ function send() {
   let message =
 `Residencya - Demande immobilière%0A
 Service: ${service}%0A
-Mandat: ${mandate}%0A
+Intérêt: ${interest}%0A
 Type de bien: ${type}%0A
 Ville: ${city}%0A
-Budget: ${budget}%0A
 Description: ${desc}%0A
 Nom: ${name}%0A
 Téléphone: ${phone}%0A
